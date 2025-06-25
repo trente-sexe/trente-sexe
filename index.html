@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trente-Sexe</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Trente-Sexe Studio</h1>
+    <p>
+      Si vous pensiez que la création de contenu est dur, vous n'êtes pas prêt.
+    </p>
+    <button id="showModalBtn">Jeu, Sexe, Match</button>
+  </div>
+
+  <!-- Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage" src="https://via.placeholder.com/800x500" alt="Photo exemple" />
+  </div>
+
+  <script>
+    const modal = document.getElementById('imageModal');
+    const btn = document.getElementById('showModalBtn');
+    const closeBtn = document.querySelector('.close');
+
+    btn.onclick = () => {
+      modal.style.display = "block";
+    }
+
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+    }
+
+    window.onclick = (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
